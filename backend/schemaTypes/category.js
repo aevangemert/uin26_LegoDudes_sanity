@@ -13,6 +13,23 @@ const category = {
             title: "Kategorinavn",
             type: "string"
         },
+        //hentet samme skug-felt som i category,js i schematypes i backend
+        {
+            title: 'Slug',
+            name: 'slug',
+            type: 'slug',
+            options: {
+                source: 'categoryname',
+                // -- blir ignorert fordi vi har slugify.. maxLength: 200, // will be ignored if slugify is set -> metode som skal kjøre et regelfelt
+                slugify: input => input
+                    // gjør alt til små bokstaver
+                    .toLowerCase()
+                    // tar 
+                    .replace(/\s+/g, '-')
+                    // 
+                    .slice(0, 200)
+            }
+        },
         {
             name: "categoryimage",
             title: "Kategoribilder",

@@ -8,6 +8,7 @@ import Nav from './components/Nav'
 import CategoryTitle from './components/CategoryTitle'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import CategoryPage from './components/CategoryPage'
 
 function App() {
 
@@ -50,8 +51,9 @@ function App() {
     <Layout setIsOpen={setIsOpen} cartQuantity={cartQuantity} isOpen={isOpen} cart={cart} setCart={setCart} totalSum={totalSum}>
       <Routes>
         <Route index element={<Page />} />
-        <Route path='city' element={<CategoryTitle title="City" />} />
-        <Route path='ninjago' element={<CategoryTitle title="Ninjago" />} />
+        <Route path="/kategori/:slug" element={<CategoryPage/>} />
+        {/* <Route path='city' element={<CategoryTitle title="City" />} />
+        <Route path='ninjago' element={<CategoryTitle title="Ninjago" />} /> */}
       </Routes>
     </Layout>
   )
