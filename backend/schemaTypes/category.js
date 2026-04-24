@@ -2,7 +2,7 @@ const category = {
 
     //viktigste å ha med
     name: "category",
-    //ikke påkrevd men... greit å ha med en etikett som blir skrevet ut i sudioet
+    //ikke påkrevd men... greit å ha med en etikett som blir skrevet ut i studioet
     title: "Kategori",
     //to spesifikke defaulttyper (schematypes) = document () eller object ()
     type: "document",
